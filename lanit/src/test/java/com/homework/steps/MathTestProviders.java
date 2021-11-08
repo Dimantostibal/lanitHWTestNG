@@ -27,6 +27,7 @@ public class MathTestProviders {
                 {0.2, 0, 0.1},
                 {20.9, 9.9, 10.9},
                 {6, 3, 4},
+                {6, 'a', 4}
         };
     }
 
@@ -53,6 +54,7 @@ public class MathTestProviders {
                 {0, 0, 0.1},
                 {1.1, 9.9, 10.9},
                 {-2, 3, 4},
+                {-2, 'a', 4},
         };
     }
 
@@ -79,6 +81,7 @@ public class MathTestProviders {
                 {1, 0.1, 0},
                 {0.90, 9.9, 10.9},
                 {0.76, 3, 4},
+                {0.76, 'a', 4}
         };
     }
 
@@ -105,6 +108,7 @@ public class MathTestProviders {
                 {0.2, 0, 0.1},
                 {108, 9.9, 10.9},
                 {11.9, 3, 4},
+                {11.9, 'a', 4}
         };
     }
 }

@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Для выхода из калькулятора нажмите Enter");
+        System.out.println("Для выхода из калькулятора нажмите Enter.");
         System.out.println("----------------------");
         System.out.println("Введите выражени, каждый символ разделяя пробелом: ");
         String input = scanner.nextLine();
@@ -22,21 +22,25 @@ public class Main {
 
             Calculator calculator = new Calculator(value1, value2);
 
-            switch (operator) {
-                case "+":
-                    calculator.sum();
-                    break;
-                case "-":
-                    calculator.sub();
-                    break;
-                case "/":
-                    calculator.div();
-                    break;
-                case "*":
-                    calculator.mul();
-                    break;
+            if (operator.equals("+") || operator.equals("-") || operator.equals("*") || operator.equals("/")) {
+                switch (operator) {
+                    case "+":
+                        calculator.sum();
+                        break;
+                    case "-":
+                        calculator.sub();
+                        break;
+                    case "/":
+                        calculator.div();
+                        break;
+                    case "*":
+                        calculator.mul();
+                        break;
+                }
+            } else {
+                System.out.println("Введен не верный знак выражения.");
+                scanner.nextLine();
             }
-
             if (value1 == 0 || value2 == 0) {
                 System.out.println("Деление на 0!");
             } else if ((int) value1 == value1 || (int) value2 == value2) {
